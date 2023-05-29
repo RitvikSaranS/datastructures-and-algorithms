@@ -12,11 +12,15 @@ namespace DSA_Helper.Problems.Dynamic_Programming
         {
             this.levels = levels;
         }
-        public void MinimumEnergy_Recursive(int n)
+        public void MinimumEnergy_Recursive()
         {
-
+            int helper(int n)
+            {
+                if (n < 0) return levels[0];
+                return Math.Min(Math.Abs(levels[n] - helper(n - 1)), Math.Abs(levels[n] - helper(n - 2)));
+            }
         }
-        public void MinimumEnergy_Best(int n)
+        public void MinimumEnergy_Best()
         {
 
         }

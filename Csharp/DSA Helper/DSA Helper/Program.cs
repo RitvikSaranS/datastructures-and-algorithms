@@ -9,9 +9,9 @@ namespace DSA_Helper
     {
         static void Main(string[] args)
         {
-            E_ClimbingStairs c = new E_ClimbingStairs(6);
-            c.CountJumps_Recursive();
-            c.CountJumps_Iterative();
+            E_GeekJump e = new E_GeekJump(new int[] {  });
+            e.MinimumEnergy_Recursive();
+            e.MinimumEnergy_Best();
             Console.Read();
         }
     }
