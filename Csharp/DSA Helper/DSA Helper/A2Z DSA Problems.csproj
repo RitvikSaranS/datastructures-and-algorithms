@@ -6,4 +6,20 @@
     <RootNamespace>DSA_Helper</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Problems\BinarySearch\" />
+    <Folder Include="Problems\Bit Manipulation\" />
+    <Folder Include="Problems\Heaps\" />
+    <Folder Include="Problems\Greedy Algorithms\" />
+    <Folder Include="Problems\Binary Trees\" />
+    <Folder Include="Problems\Binary Search Trees\" />
+    <Folder Include="Problems\Graphs\" />
+    <Folder Include="Problems\Linked List\" />
+    <Folder Include="Problems\Tries\" />
+    <Folder Include="Problems\Sliding Window and Two Pointer\" />
+    <Folder Include="Problems\Recursion\" />
+    <Folder Include="Problems\Stacks and Queues\" />
+    <Folder Include="Problems\Strings\" />
+  </ItemGroup>
+
 </Project>
