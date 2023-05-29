@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2Z DSA Problems", "DSA Helper\A2Z DSA Problems.csproj", "{F24D6436-A7BA-42C4-AFAB-08951EB4ACD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F24D6436-A7BA-42C4-AFAB-08951EB4ACD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F24D6436-A7BA-42C4-AFAB-08951EB4ACD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F24D6436-A7BA-42C4-AFAB-08951EB4ACD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F24D6436-A7BA-42C4-AFAB-08951EB4ACD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F700CF0-2B5F-45C2-AF14-C280DF9EB92E}
+	EndGlobalSection
+EndGlobal
