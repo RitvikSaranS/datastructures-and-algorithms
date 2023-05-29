@@ -38,6 +38,6 @@ You can navigate through the different directories within this repository to fin
 
 ## Contributing
 
-Contributions to this repository are welcome! If you have a new problem or an improved solution to an existing problem, you can submit a pull request. Please make sure to follow the guidelines outlined in the CONTRIBUTING.md file. If you encounter any issues or have suggestions for improvements, please open an issue in the repository.
+Contributions to this repository are welcome! If you have a new problem or an improved solution to an existing problem, you can submit a pull request. If you encounter any issues or have suggestions for improvements, please open an issue in the repository.
 
 Happy coding!
