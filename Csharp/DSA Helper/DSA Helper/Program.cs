@@ -9,9 +9,7 @@ namespace DSA_Helper
     {
         static void Main(string[] args)
         {
-            E_GeekJump e = new E_GeekJump(new int[] { 10, 20,30, 10 });
-            e.MinimumEnergy_Recursive();
-            e.MinimumEnergy_Best();
+            
             Console.Read();
         }
     }
