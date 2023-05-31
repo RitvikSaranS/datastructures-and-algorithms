@@ -4,6 +4,7 @@ using System.Text;
 
 namespace DSA_Helper.Problems.Arrays
 {
+    // Moore's Voting Algorithm
     // https://leetcode.com/problems/majority-element
     class M_MajorityElement
     {
