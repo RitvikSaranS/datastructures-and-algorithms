@@ -76,7 +76,7 @@ namespace DSA_Helper.Arsenal
                 Console.WriteLine("There is no Nodes to delete");
                 return;
             }
-            if (position.GetType() == typeof(string))
+            else if (position.GetType() == typeof(string))
             {
                 if (position == "first")
                 {
@@ -91,8 +91,28 @@ namespace DSA_Helper.Arsenal
                         prev = tmp;
                         tmp = tmp.next;
                     }
-                    prev.next = tmp.next;
+                    if (prev == null) HEAD = null;
+                    else prev.next = tmp.next;
+                } else Console.WriteLine("Enter a valid position. first, last or zero based index");
+            }
+            else
+            {
+                int count = 0;
+                Node tmp = HEAD;
+                Node prev = null;
+                while (count < position)
+                {
+                    if (tmp == null)
+                    {
+                        Console.WriteLine("Enter a valid zero based index position to remove");
+                        return;
+                    }
+                    count++;
+                    prev = tmp;
+                    tmp = tmp.next;
                 }
+                if (prev == null) HEAD = null;
+                else prev.next = tmp.next;
             }
         }
         public Node GetLastNode()

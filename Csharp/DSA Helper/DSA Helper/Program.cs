@@ -14,6 +14,8 @@ namespace DSA_Helper
             //M_MajorityElement2 m = new M_MajorityElement2(new int[] { 2, 1, 1, 3, 1, 4, 5, 6 });
             //m.FindMajority();
             LinkedList ll = new LinkedList();
+            ll.AddNode(1, 0);
+            ll.RemoveNode(8);
             ll.PrintLinkedList();
             Console.Read();
         } 
