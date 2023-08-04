@@ -12,7 +12,7 @@ namespace DSA_Helper.Arsenal
             this.nums = nums;
         }
         // Type can be normal(default), nextbig or nextsmall
-        public int BinarySearch(int target, int start = 0, int end = -1, string type = "normal")
+        public int OrderAgnosticBinarySearch(int target, int start = 0, int end = -1, string type = "normal")
         {
             if (nums.Length == 0) return -1;
             bool isDesc = nums[0] > nums[nums.Length - 1];
@@ -66,8 +66,9 @@ namespace DSA_Helper.Arsenal
             }
             return -1;
         }
-        public int PivotFinder()
+        public int PivotFinderForRotatedSortedArray()
         {
+            Console.WriteLine("Alert: This works only if the array is ASCENDING");
             if (nums.Length == 0) return -1;
             int start = 0;
             int end = nums.Length - 1;
@@ -93,6 +94,16 @@ namespace DSA_Helper.Arsenal
                 }
             }
             return 0;
+        }
+        public bool CheckIfRotatedSorted(int pivot)
+        {
+            Console.WriteLine("Alert: This works only if the array is ASCENDING");
+            for(int i = pivot; i < nums.Length; i++)
+            {
+                i %= nums.Length;
+                if (nums[i] > nums[i + 1]) return false;
+            }
+            return true;
         }
         public int LinearSearch(int target)
         {

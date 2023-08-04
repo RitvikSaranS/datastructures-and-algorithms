@@ -16,10 +16,6 @@ namespace DSA_Helper.Arsenal
         public void MergeSort()
         {
             Helper(0, nums.Length - 1);
-            for (int i = 0; i < nums.Length; i++)
-            {
-                Console.Write(nums[i] + " ");
-            }
         }
         public void Helper(int start, int end)
         {
@@ -59,10 +55,6 @@ namespace DSA_Helper.Arsenal
         public void QuickSort()
         {
             helper(0, nums.Length - 1);
-            for (int i = 0; i < nums.Length; i++)
-            {
-                Console.Write(nums[i] + " ");
-            }
         }
         public void helper(int start, int end)
         {
@@ -92,6 +84,13 @@ namespace DSA_Helper.Arsenal
             start = (pivotEle == nums[start]) ? start : end;
             helper(start2, start - 1);
             helper(start + 1, end2);
+        }
+        public void PrintArray()
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                Console.Write(nums[i] + " ");
+            }
         }
     }
 }
