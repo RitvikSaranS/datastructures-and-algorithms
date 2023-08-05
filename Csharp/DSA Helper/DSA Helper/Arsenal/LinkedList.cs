@@ -15,11 +15,23 @@ namespace DSA_Helper.Arsenal
                 this.value = value;
                 next = null;
             }
+            public void PrintNode()
+            {
+                Console.WriteLine(value);
+            }
         }
         Node HEAD;
         public LinkedList()
         {
             HEAD = null;
+        }
+        public LinkedList(int[] arr)
+        {
+            HEAD = null;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                AddNode(arr[i], "last");
+            }
         }
         public void AddNode(int value, dynamic position)
         {
@@ -125,6 +137,14 @@ namespace DSA_Helper.Arsenal
             Node tmp = HEAD;
             while (tmp.next != null) tmp = tmp.next;
             return tmp;
+        }
+        public Node GetHeadNode()
+        {
+            return HEAD;
+        }
+        public void SetHeadNode(Node node)
+        {
+            HEAD = node;
         }
         public void PrintLinkedList()
         {

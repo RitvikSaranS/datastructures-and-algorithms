@@ -14,7 +14,6 @@
     <Folder Include="Problems\Binary Trees\" />
     <Folder Include="Problems\Binary Search Trees\" />
     <Folder Include="Problems\Graphs\" />
-    <Folder Include="Problems\Linked List\" />
     <Folder Include="Problems\Tries\" />
     <Folder Include="Problems\Sliding Window and Two Pointer\" />
     <Folder Include="Problems\Recursion\" />

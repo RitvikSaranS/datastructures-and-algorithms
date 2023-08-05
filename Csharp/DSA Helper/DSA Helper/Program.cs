@@ -4,6 +4,7 @@ using DSA_Helper.Problems.Dynamic_Programming;
 using System;
 using DSA_Helper.Problems.RoughWork;
 using DSA_Helper.Arsenal;
+using DSA_Helper.Problems.Linked_List;
 
 namespace DSA_Helper
 {
@@ -11,12 +12,8 @@ namespace DSA_Helper
     {
         static void Main(string[] args)
         {
-            //M_MajorityElement2 m = new M_MajorityElement2(new int[] { 2, 1, 1, 3, 1, 4, 5, 6 });
-            //m.FindMajority();
-            LinkedList ll = new LinkedList();
-            ll.AddNode(1, 0);
-            ll.RemoveNode(8);
-            ll.PrintLinkedList();
+            E_ReverseLL l = new E_ReverseLL(new int[]{ 1, 2, 3, 4 });
+            l.Reverse();
             Console.Read();
         } 
     }
