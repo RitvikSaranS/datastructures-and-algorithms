@@ -5,6 +5,7 @@ using System;
 using DSA_Helper.Problems.RoughWork;
 using DSA_Helper.Arsenal;
 using DSA_Helper.Problems.Linked_List;
+using System.Collections.Generic;
 
 namespace DSA_Helper
 {
@@ -12,8 +13,11 @@ namespace DSA_Helper
     {
         static void Main(string[] args)
         {
-            E_ReverseLL l = new E_ReverseLL(new int[]{ 1, 2, 3, 4 });
-            l.Reverse();
+            LinkedList ll = new LinkedList(new int[] { 1,2,4 });
+            Stack s = new Stack(ll.GetHeadNode());
+            //s.Push(5);
+            s.Pop();
+            s.PrintStack();
             Console.Read();
         } 
     }
