@@ -7,9 +7,8 @@ namespace DSA_Helper.Arsenal
 {
     class Stack
     {
-        int count;
-        Node HEAD;
-        LinkedList ll = null;
+        int count = 0;
+        Node HEAD = null;
         List<int> arrList = null;
         public Stack()
         {
@@ -23,7 +22,7 @@ namespace DSA_Helper.Arsenal
         }
         public Stack(Node HEAD)
         {
-            ll = new LinkedList();
+            LinkedList ll = new LinkedList();
             ll.SetHeadNode(HEAD);
             this.HEAD = ll.Reverse();
             SetCount();
