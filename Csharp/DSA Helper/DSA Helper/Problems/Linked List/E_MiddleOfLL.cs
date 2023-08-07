@@ -1,7 +1,6 @@
 ﻿using DSA_Helper.Arsenal;
 using System;
 using System.Text;
-using static DSA_Helper.Arsenal.LinkedList;
 
 namespace DSA_Helper.Problems.Linked_List
 {

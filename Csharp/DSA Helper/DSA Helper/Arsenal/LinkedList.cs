@@ -6,21 +6,7 @@ namespace DSA_Helper.Arsenal
 {
     public class LinkedList
     {
-        public class Node
-        {
-            public int value;
-            public Node next;
-            public Node(int value)
-            {
-                this.value = value;
-                next = null;
-            }
-            public void PrintNode()
-            {
-                Console.WriteLine(value);
-            }
-        }
-        Node HEAD;
+        public Node HEAD;
         public LinkedList()
         {
             HEAD = null;
