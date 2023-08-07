@@ -146,6 +146,22 @@ namespace DSA_Helper.Arsenal
         {
             HEAD = node;
         }
+        public Node Reverse()
+        {
+            if (HEAD == null) return null;
+            Node previous = null;
+            Node current = HEAD;
+            Node next = current.next;
+            while (next != null)
+            {
+                current.next = previous;
+                previous = current;
+                current = next;
+                next = next.next;
+            }
+            current.next = previous;
+            return current;
+        }
         public void PrintLinkedList()
         {
             Node tmp = HEAD;

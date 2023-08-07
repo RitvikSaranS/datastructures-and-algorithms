@@ -25,7 +25,7 @@ namespace DSA_Helper.Arsenal
         {
             ll = new LinkedList();
             ll.SetHeadNode(HEAD);
-            this.HEAD = HEAD;
+            this.HEAD = ll.Reverse();
             SetCount();
         }
         public void Push(int value)
@@ -124,21 +124,26 @@ namespace DSA_Helper.Arsenal
                     {
                         Console.Write($"{arrList[i]} ");
                     }
-                }else Console.Write("null ");
-            }else
+                }
+                else Console.Write("null ");
+                Console.WriteLine("<- HEAD");
+            }
+            else
             {
-                if(HEAD != null)
+
+                Console.Write("HEAD ->");
+                if (HEAD != null)
                 {
                     Node tmp = HEAD;
                     while (tmp != null)
                     {
-                        Console.Write($"{tmp.value} ");
+                        Console.Write($" {tmp.value}");
                         tmp = tmp.next;
                     }
+                    Console.WriteLine();
                 }
-                else Console.Write("null ");
+                else Console.WriteLine(" null");
             }
-            Console.WriteLine("<- HEAD");
         }
     }
 }

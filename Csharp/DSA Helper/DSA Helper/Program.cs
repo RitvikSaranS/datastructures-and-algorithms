@@ -13,11 +13,15 @@ namespace DSA_Helper
     {
         static void Main(string[] args)
         {
-            LinkedList ll = new LinkedList(new int[] { 1,2,4 });
-            Stack s = new Stack(ll.GetHeadNode());
-            //s.Push(5);
-            s.Pop();
-            s.PrintStack();
+            LinkedList ll = new LinkedList(new int[] { 1, 2, 3 });
+            Stack s1 = new Stack(ll.GetHeadNode());
+            Stack s2 = new Stack(new List<int> { 1, 2, 3 });
+            s1.PrintStack();
+            s2.PrintStack();
+            s1.Pop();
+            s2.Pop();
+            s1.PrintStack();
+            s2.PrintStack();
             Console.Read();
         } 
     }
