@@ -114,6 +114,11 @@ namespace DSA_Helper.Arsenal
                 }
             }
         }
+        public int Size()
+        {
+            Console.WriteLine(count);
+            return count;
+        }
         public void PrintStack()
         {
             if(HEAD == null)
