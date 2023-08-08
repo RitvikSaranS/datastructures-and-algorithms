@@ -7,13 +7,17 @@ namespace DSA_Helper.Arsenal
     public class LinkedList
     {
         public Node HEAD;
+        public Node TAIL;
+        public int Size;
         public LinkedList()
         {
             HEAD = null;
+            TAIL = null;
         }
         public LinkedList(int[] arr)
         {
             HEAD = null;
+            TAIL = null;
             for (int i = 0; i < arr.Length; i++)
             {
                 AddNode(arr[i], "last");
@@ -25,9 +29,9 @@ namespace DSA_Helper.Arsenal
             if (HEAD == null)
             {
                 HEAD = NewNode;
-                return;
+                TAIL = NewNode;
             }
-            if (position.GetType() == typeof(string))
+            else if (position.GetType() == typeof(string))
             {
                 if (position.ToLower().Trim() == "first")
                 {
@@ -36,11 +40,13 @@ namespace DSA_Helper.Arsenal
                 }
                 else if (position.ToLower().Trim() == "last")
                 {
-                    GetLastNode().next = NewNode;
+                    TAIL.next = NewNode;
+                    TAIL = NewNode;
                 }
                 else
                 {
                     Console.WriteLine("Enter a valid position. first, last or zero based index");
+                    return;
                 }
             }
             else
@@ -66,6 +72,7 @@ namespace DSA_Helper.Arsenal
                 }
                 else prev.next = NewNode;
             }
+            Size++;
         }
         public void RemoveNode(dynamic position)
         {
@@ -78,6 +85,10 @@ namespace DSA_Helper.Arsenal
             {
                 if (position == "first")
                 {
+                    if (HEAD == TAIL)
+                    {
+                        TAIL = TAIL.next;
+                    }
                     HEAD = HEAD.next;
                 }
                 else if(position == "last")
@@ -89,9 +100,21 @@ namespace DSA_Helper.Arsenal
                         prev = tmp;
                         tmp = tmp.next;
                     }
-                    if (prev == null) HEAD = null;
-                    else prev.next = tmp.next;
-                } else Console.WriteLine("Enter a valid position. first, last or zero based index");
+                    if (prev == null)
+                    {
+                        HEAD = null;
+                        TAIL = null;
+                    }
+                    else
+                    {
+                        prev.next = tmp.next;
+                        TAIL = prev;
+                    }
+                } else
+                {
+                    Console.WriteLine("Enter a valid position. first, last or zero based index");
+                    return;
+                }
             }
             else
             {
@@ -112,17 +135,11 @@ namespace DSA_Helper.Arsenal
                 if (prev == null) HEAD = null;
                 else prev.next = tmp.next;
             }
+            Size--;
         }
         public Node GetLastNode()
         {
-            if(HEAD == null)
-            {
-                Console.WriteLine("Linked List is Empty");
-                return HEAD;
-            }
-            Node tmp = HEAD;
-            while (tmp.next != null) tmp = tmp.next;
-            return tmp;
+            return TAIL;
         }
         public Node GetHeadNode()
         {
@@ -131,6 +148,16 @@ namespace DSA_Helper.Arsenal
         public void SetHeadNode(Node node)
         {
             HEAD = node;
+        }
+        public Node Clone()
+        {
+            LinkedList clonedLL = new LinkedList();
+            Node tmp = HEAD;
+            while(tmp != null)
+            {
+                clonedLL.AddNode(tmp.value, "last");
+            }
+            return clonedLL.GetHeadNode();
         }
         public Node Reverse()
         {
@@ -146,7 +173,8 @@ namespace DSA_Helper.Arsenal
                 next = next.next;
             }
             current.next = previous;
-            return current;
+            HEAD = current;
+            return HEAD;
         }
         public void PrintLinkedList()
         {
